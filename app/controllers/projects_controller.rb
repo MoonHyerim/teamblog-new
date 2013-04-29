@@ -2,11 +2,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-<<<<<<< HEAD
     @projects = Project.paginate(page: params[:page],per_page: 10,order: 'created_at DESC')
-=======
-    @projects = Project.paginate(page: params[:page],per_page: 5,order: 'created_at DESC')
->>>>>>> refs/remotes/github/master
     @length = @projects.length
     respond_to do |format|
       format.html # index.html.erb
