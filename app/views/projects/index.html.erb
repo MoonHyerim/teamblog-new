@@ -1,0 +1,36 @@
+<h1 class="text-center">PROJECT</h1>
+<table class="table table-striped">
+  <tr>
+    <th>No.</th>
+    <th>Title</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <% if user_signed_in? %>
+      <th></th>
+      <th></th>
+    <%end %>
+  </tr>
+
+<% @projects.each_with_index do |project, index| %>
+  <tr>
+    <td><%= @length - (index) %></td>
+    <td><%= link_to project.title, project %></td>
+    <td><%= project.start_date %></td>
+    <td><%= project.end_date %></td>
+    <% if  user_signed_in? %>
+      <td><%= link_to 'Edit', edit_project_path(project), class:"btn btn-info" %></td>
+      <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+<% if user_signed_in? %>
+  <%= link_to 'New Project', new_project_path, class:"btn btn-primary pull-right " %><br>
+<%end %>
+<<<<<<< HEAD
+<div class="flickr_pagination">
+  <%= will_paginate @projects, container:false %>
+=======
+<%= will_paginate @projects %>
+>>>>>>> refs/remotes/github/master
+</div>

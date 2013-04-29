@@ -1,0 +1,18 @@
+<h1>NOTICE</h1>
+
+<div id='accordion'>
+<% @notices.each_with_index do |notice,index| %>
+    <h3><%= notice.title %></h3>
+    <div><p><%= notice.content %></p>
+    <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_notice_path(notice),class:"btn btn-info" %>
+    <%= link_to 'Destroy', notice, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+    <% end %>
+    </div>
+<% end %>
+</div>
+
+<br />
+<% if user_signed_in? %>
+  <%= link_to 'New Notice', new_notice_path %>
+<% end %>

@@ -1,0 +1,21 @@
+<h1 class="text-center text-white">Listing Members</h1>
+<div class="papers">
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Student ID</th>
+    <th>Phone Number</th>
+    <th>E-Mail</th>
+    <th>Part</th>
+  </tr>
+  <% @member_list.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= member.student_id %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.email %></td>
+        <td><%= member.part %></td>
+      </tr>
+  <% end %>
+</table>
+</div>

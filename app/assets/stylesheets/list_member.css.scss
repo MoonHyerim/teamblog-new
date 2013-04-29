@@ -1,0 +1,21 @@
+// Place all the styles related to the list_member controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.list_line_even{
+  background: White;
+  color: black;
+}
+.list_line_odd{
+  background: Grey;
+  color: white;
+
+}
+table{
+  border-spacing: 2em;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  border-collapse: collapse;
+  width: 600px;
+}
+
