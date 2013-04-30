@@ -11,9 +11,9 @@
     <%end %>
   </tr>
 
-<% @projects.each_with_index do |project, index| %>
+<% @projects.each do |project| %>
   <tr>
-    <td><%= @length - (index) %></td>
+    <td><%= project.id %></td>
     <td><%= link_to project.title, project %></td>
     <td><%= project.start_date %></td>
     <td><%= project.end_date %></td>
@@ -27,10 +27,6 @@
 <% if user_signed_in? %>
   <%= link_to 'New Project', new_project_path, class:"btn btn-primary pull-right " %><br>
 <%end %>
-<<<<<<< HEAD
 <div class="flickr_pagination">
   <%= will_paginate @projects, container:false %>
-=======
-<%= will_paginate @projects %>
->>>>>>> refs/remotes/github/master
 </div>
