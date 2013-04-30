@@ -10,4 +10,6 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+  def tmp_gallery
+  end
 end
