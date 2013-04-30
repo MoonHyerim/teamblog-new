@@ -3,17 +3,23 @@
     <div class="span2 offset1">
       <div class="well sidebar-nav-fixed ">
         <ul class="nav nav-pills nav-stacked ">
-          <li><%=link_to "HOME", root_path%></li>
-          <li><%=link_to "NOTICE", notices_path %></li>
+          <li class="<%= 'active' if current_page?(root_path)%>"><%=link_to "HOME", root_path%></li>
+          <li class="<%= 'active' if current_page?(notices_path)%>"><%=link_to "NOTICE", notices_path %></li>
           <li><a href="#">BBS</a></li>
-          <li><a href="#">GALLERY</a></li>
+          <li class="<%= 'active' if current_page?(static_pages_tmp_gallery_path)%>"><%=link_to "GALLERY", static_pages_tmp_gallery_path%></li>
           <li><a href="#">BLOG</a></li>
           <li class="nav-header">TEAM</li>
-          <li><%=link_to "Member Info", members_path%></li>
-          <li class="active"><%=link_to "Project Info", projects_path%></li>
-          <li><a href="http://club.cyworld.com/clubV1/Home.cy/55411167" >Nate Club</a></li>
-          <li><a href='https://drive.google.com/folderview?id=0BykAfT30nvhTZFkteF9IOGRvMVE&usp=sharing'>Google Drive</a></li>
-          <li><a href="https://trello.com/board/capstone/51453019a0f5e9460f0007fe">Trello</a></li>
+          <li  class="<%= 'active' if current_page?(members_path)%>"><%=link_to "Member Info", members_path%></li>
+          <li  class="<%= 'active' if current_page?(projects_path)%>"><%=link_to "Project Info", projects_path%></li>
+          <li>
+            <%= link_to "Nate Club", "http://club.cyworld.com/clubV1/Home.cy/55411167", target:"_blank"%>
+          </li>
+          <li>
+            <%= link_to "Google Drive",'https://drive.google.com/folderview?id=0BykAfT30nvhTZFkteF9IOGRvMVE&usp=sharing',target:"_blank"%>
+          </li>
+          <li>
+            <%= link_to "Trello", "https://trello.com/board/capstone/51453019a0f5e9460f0007fe", target:"_blank" %>
+          </li>
         </ul>
       </div><!--/.well -->
     </div><!--/span-->
