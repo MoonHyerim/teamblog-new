@@ -7,7 +7,9 @@
           <li class="<%= 'active' if current_page?(notices_path)%>"><%=link_to "NOTICE", notices_path %></li>
           <li class="<%= 'active' if current_page?(boards_path)%>"><%=link_to "BBS", boards_path %></li>
           <li class="<%= 'active' if current_page?(static_pages_tmp_gallery_path)%>"><%=link_to "GALLERY", static_pages_tmp_gallery_path%></li>
-          <li><a href="#">BLOG</a></li>
+          <li><%= link_to "Blog1", "http://moonblog1.herokuapp.com/", target:"_blank" %></li>
+          <li><%= link_to "Blog2", "http://mhrblog2.herokuapp.com/", target:"_blank" %></li>
+          <li><%= link_to "RailsTodo", "http://rails-todolist.herokuapp.com/", target:"_blank"%></li>
           <li class="nav-header">TEAM</li>
           <li  class="<%= 'active' if current_page?(members_path)%>"><%=link_to "Member Info", members_path%></li>
           <li  class="<%= 'active' if current_page?(projects_path)%>"><%=link_to "Project Info", projects_path%></li>
