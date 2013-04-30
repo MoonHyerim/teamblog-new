@@ -1,4 +1,7 @@
 CommunityEngine::Application.routes.draw do
+  resources :boards
+
+
   resources :notices
 
 

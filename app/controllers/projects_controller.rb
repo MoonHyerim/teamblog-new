@@ -3,7 +3,6 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.paginate(page: params[:page],per_page: 10,order: 'created_at DESC')
-    @length = @projects.length
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }

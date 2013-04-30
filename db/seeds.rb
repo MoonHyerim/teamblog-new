@@ -25,3 +25,8 @@ Member.create(email: "g10109328@gmail.com", name: "문혜림", part:"Back-End De
   Notice.create(title: "Something Notice..No.#{i}",
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit")
 end
+
+#Make Boards
+100.times do |i|
+  Board.create(name:"Someone #{i}", email:"someone-#{i}@exmaple.com", title: "Something Title  #{i}", content:"Contentaalsdkjf",count: rand(100))
+end

@@ -5,7 +5,7 @@
         <ul class="nav nav-pills nav-stacked ">
           <li class="<%= 'active' if current_page?(root_path)%>"><%=link_to "HOME", root_path%></li>
           <li class="<%= 'active' if current_page?(notices_path)%>"><%=link_to "NOTICE", notices_path %></li>
-          <li><a href="#">BBS</a></li>
+          <li class="<%= 'active' if current_page?(boards_path)%>"><%=link_to "BBS", boards_path %></li>
           <li class="<%= 'active' if current_page?(static_pages_tmp_gallery_path)%>"><%=link_to "GALLERY", static_pages_tmp_gallery_path%></li>
           <li><a href="#">BLOG</a></li>
           <li class="nav-header">TEAM</li>
