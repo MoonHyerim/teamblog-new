@@ -13,6 +13,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'zeus'
+  gem "capistrano"
 end
 
 group :production do
